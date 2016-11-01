@@ -4,7 +4,7 @@
   "description": "findit",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=development DEBUG=* nodemon --ignore logs/ --ignore doc/ --ignore test/ --ignore *.zip --ignore npm-debug.log app.js",
+    "start": "NODE_ENV=development DEBUG=* nodemon --ignore logs/ --ignore test/ --ignore npm-debug.log app.js",
     "test": "istanbul cover _mocha \"test/**/*.spec.js\" && istanbul report text",
     "deploy:testing": "npm test && ./script/deploy.sh testing",
     "deploy:production": "npm test && ./script/deploy.sh production"

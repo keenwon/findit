@@ -3,7 +3,6 @@
 const rimraf = require('rimraf');
 const koa = require('koa');
 const fetch = require('node-fetch');
-const request = require('../../lib/request');
 const proxyquire = require('proxyquire').noPreserveCache();
 
 const chai = require('chai');

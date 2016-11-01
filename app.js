@@ -35,14 +35,7 @@ const pug = new Pug({
   basedir: './sites',
   noCache: app.env !== 'production',
   debug: app.env !== 'production',
-  app: app,
-  locals: {
-    production: app.env === 'production',
-    testing: app.env === 'testing',
-    toaweb: app.env === 'toaweb',
-    timestamp: config.timestamp,
-    cdn: config.cdn
-  }
+  app: app
 });
 
 // body parser

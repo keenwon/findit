@@ -5,7 +5,6 @@ const koa = require('koa');
 const router = require('koa-router')();
 const Pug = require('koa-pug');
 const fetch = require('node-fetch');
-const config = require('../../config');
 const error = require('../../lib/error');
 const logger = require('../../lib/logger');
 
@@ -30,14 +29,7 @@ describe('error测试', function () {
     new Pug({
       viewPath: path.join(__dirname, '../../sites'),
       basedir: path.join(__dirname, '../../sites'),
-      app: app,
-      locals: {
-        production: app.env === 'production',
-        testing: app.env === 'testing',
-        toaweb: app.env === 'toaweb',
-        timestamp: config.timestamp,
-        cdn: config.cdn
-      }
+      app: app
     });
 
     router.get('/success', function *() {
