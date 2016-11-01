@@ -3,7 +3,6 @@
 const lint = require('mocha-eslint');
 
 var paths = [
-    'configs',
     'lib',
     'sites',
     '*.js'
