@@ -11,7 +11,7 @@ module.exports = {
 
   // -------- static configuration --------
 
-  'static.root': path.join(__dirname, '..'),
+  'static.root': path.join(__dirname),
 
   'static.pathPrefix': '/static',
 
@@ -27,7 +27,7 @@ module.exports = {
   'log.api.enable': true,
 
   // 日志文件夹路径
-  'log.path': path.join(__dirname, '../logs'),
+  'log.path': path.join(__dirname, './logs'),
 
   // 单个日志文件大小
   'log.maxsize': 1024 * 1024 * 100
