@@ -1,0 +1,66 @@
+'use strict';
+
+const koa = require('koa');
+const app = koa();
+const Pug = require('koa-pug');
+const favicon = require('koa-favicon');
+const jsonp = require('koa-response-jsonp');
+
+const config = require('./config');
+const router = require('./router');
+const logger = require('./lib/logger');
+const bodyParser = require('./lib/bodyParser');
+const error = require('./lib/error');
+const serve = require('./lib/static');
+
+// logger
+logger.register(app);
+app.use(logger.useGlobalLogger());
+
+// exception handler
+app.use(error);
+
+// jsonp support
+jsonp(app);
+
+// server info
+app.use(function *(next) {
+  yield next;
+  this.set('X-Powered-By', 'findit');
+});
+
+// view engine
+const pug = new Pug({
+  viewPath: './sites',
+  basedir: './sites',
+  noCache: app.env !== 'production',
+  debug: app.env !== 'production',
+  app: app,
+  locals: {
+    production: app.env === 'production',
+    testing: app.env === 'testing',
+    toaweb: app.env === 'toaweb',
+    timestamp: config.timestamp,
+    cdn: config.cdn
+  }
+});
+
+// body parser
+app.use(bodyParser);
+
+// router
+app.use(router.routes());
+
+// static
+app.use(serve());
+
+// favicon
+app.use(favicon('./public/favicon.ico'));
+
+if (require.main === module) {
+  // istanbul ignore next
+  // 开发&测试环境时覆盖
+  app.listen(config['app.port'] || 3000);
+} else {
+  module.exports = app;
+}

@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "findit",
+      "script": "app.js",
+      "watch": true,
+      "watch_options": {
+        "persistent": true,
+        "ignoreInitial": true,
+        "usePolling": true,
+        "interval": 60000,
+        "binaryInterval": 60000
+      },
+      "ignore_watch": [
+        "node_modules",
+        "logs"
+      ],
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "instances": 2,
+      "exec_mode": "cluster",
+      "max_restarts": 3600,
+      "out_file": "./logs",
+      "error_file": "./logs"
+    }
+  ]
+}
