@@ -31,8 +31,8 @@ app.use(function *(next) {
 
 // view engine
 const pug = new Pug({
-  viewPath: './sites',
-  basedir: './sites',
+  viewPath: './sites/views',
+  basedir: './sites/views',
   noCache: app.env !== 'production',
   debug: app.env !== 'production',
   app: app
