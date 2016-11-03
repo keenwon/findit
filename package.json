@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=development DEBUG=* nodemon --ignore logs/ --ignore test/ --ignore npm-debug.log app.js",
-    "test": "istanbul cover _mocha \"test/**/*.spec.js\" && istanbul report text",
+    "test": "npm run test:puglint && npm run test:mocha",
+    "test:puglint": "pug-lint sites/* ",
+    "test:mocha": "istanbul cover _mocha \"test/**/*.spec.js\" && istanbul report text",
     "deploy:testing": "npm test && ./script/deploy.sh testing",
     "deploy:production": "npm test && ./script/deploy.sh production"
   },
@@ -44,6 +46,7 @@
     "node-fetch": "^1.6.3",
     "nodemon": "^1.11.0",
     "proxyquire": "^1.7.9",
+    "pug-lint": "^2.3.0",
     "rimraf": "^2.5.4"
   }
 }
