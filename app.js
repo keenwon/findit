@@ -46,7 +46,9 @@ app.use(router.routes());
 
 // static
 app.use(function *() {
-  yield send(this, this.path, { root: __dirname + '/public' });
+  yield send(this, this.path, {
+    root: __dirname + '/public'
+  });
 });
 
 // favicon
