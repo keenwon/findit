@@ -27,8 +27,8 @@ describe('error测试', function () {
     app.use(error);
 
     new Pug({
-      viewPath: path.join(__dirname, '../../sites'),
-      basedir: path.join(__dirname, '../../sites'),
+      viewPath: path.join(__dirname, '../../sites/views'),
+      basedir: path.join(__dirname, '../../sites/views'),
       app: app
     });
 
