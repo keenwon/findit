@@ -5,13 +5,13 @@ const app = koa();
 const Pug = require('koa-pug');
 const favicon = require('koa-favicon');
 const jsonp = require('koa-response-jsonp');
+const send = require('koa-send');
 
 const config = require('./config');
 const router = require('./router');
 const logger = require('./lib/logger');
 const bodyParser = require('./lib/bodyParser');
 const error = require('./lib/error');
-const serve = require('./lib/static');
 
 // logger
 logger.register(app);
@@ -45,7 +45,9 @@ app.use(bodyParser);
 app.use(router.routes());
 
 // static
-app.use(serve());
+app.use(function *() {
+  yield send(this, this.path, { root: __dirname + '/public' });
+});
 
 // favicon
 app.use(favicon('./public/favicon.ico'));

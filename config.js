@@ -9,12 +9,6 @@ module.exports = {
   // 端口号
   'app.port': 3000,
 
-  // -------- static configuration --------
-
-  'static.root': path.join(__dirname),
-
-  'static.pathPrefix': '/static',
-
   // -------- log configuration --------
 
   // 启用日志

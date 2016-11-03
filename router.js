@@ -11,7 +11,7 @@ const declareController = require('./sites/controllers/declare');
 /**
  * 列表页
  */
-router.get('/:lang/list/:keywords', listController);
+router.get('/:lang/list', listController);
 
 /**
  * 资源页
@@ -32,6 +32,8 @@ router.get('/:lang/declare', declareController);
  * 首页
  */
 router.get('/', indexController);
-router.get('/:lang', indexController);
+router.get('/cn', indexController);
+router.get('/tw', indexController);
+router.get('/en', indexController);
 
 module.exports = router;

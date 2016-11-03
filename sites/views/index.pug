@@ -1,4 +1,38 @@
-extends common/layout
-
-block body
-  p index
+doctype html
+html(lang='zh-CN')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='最新最快的磁力资源搜索引擎。影视、音乐、游戏、程序、图片、小说...')
+    title Findit 磁力搜索引擎
+    link(rel='stylesheet', type='text/css', media='all', href='/pc/css/style.min.css')
+  body
+    .index-bg(style="background:#333 url('http://ww2.sinaimg.cn/large/a31b888dgw1emm79y32mtj21hc0svh06.jpg') no-repeat center center")
+    .index-header
+      .index-header-content
+        a.title(href='/cn') FindIt
+        a.right(href='/cn/declare') 声明
+        a.right(href='/cn/help') 帮助
+        a.right(href='https://github.com/keenwon/antcolony') Fork me on Github
+      .index-header-bg
+    .index-main
+      h1 FindIt.com
+      .index-search
+        form#form(method='GET', action='/cn/list')
+          input#input(type='text', name='q', autocomplete='off', maxlength='40')
+          button(type='submit') 搜 索
+    .index-foot
+      p
+        a(href='/cn') 中文（简体）
+        a(href='/tw') 中文（繁體）
+        a(href='/en') English
+      p
+        | Copyright © 2014 findit.so
+        a(href='http://mikecrm.com/f.php?t=hPd4wY', target='_blank') 联系我们
+    script(src='//cdn.bootcss.com/jquery/1.10.2/jquery.min.js')
+    script(src='/pc/js/index.js')
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-48837591-2', 'auto');ga('send', 'pageview');
+    script.
+      var _hmt = _hmt || [];(function () {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?22ddf880066a88ece956bb70dca2ae1a";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();

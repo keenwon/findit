@@ -1,10 +1,31 @@
 doctype html
-html(lang='zh-CN')
+html
   head
-    meta(charset='utf-8')
-    block title
-      title Findit
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='最新最快的磁力资源搜索引擎。影视、音乐、游戏、程序、图片、小说...')
+    title Findit 磁力搜索引擎
+    link(rel='stylesheet', type='text/css', media='all', href='/pc/css/style.min.css')
     block head
   body
+    .header
+      .header-brand
+        a(href='javascript:;') FindIt
+      .header-search
+        input(type='text', maxlength='40', autocomplete='off')
+        button 搜 索
+      .header-right
+        a(href='javascript:;') 声明
+        a(href='javascript:;') 帮助
+
     block body
+
+    p.clear  
+    .footer
+      p
+        a(href='javascript:;') 中文（简体）
+        a(href='javascript:;') 中文（繁體）
+        a(href='javascript:;') English
+      p Copyright © 2014 findit.so
     block foot
