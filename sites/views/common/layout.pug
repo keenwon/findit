@@ -24,8 +24,11 @@ html
     p.clear  
     .footer
       p
-        a(href='javascript:;') 中文（简体）
-        a(href='javascript:;') 中文（繁體）
-        a(href='javascript:;') English
+        a.J_Lang(href='javascript:;' data-lang='cn') 中文（简体）
+        a.J_Lang(href='javascript:;' data-lang='tw') 中文（繁體）
+        a.J_Lang(href='javascript:;' data-lang='en') English
       p Copyright © 2014 findit.so
+    script(src='//cdn.bootcss.com/jquery/1.10.2/jquery.min.js')
+    script(src='//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js')
+    script(src='/pc/js/common.js')
     block foot

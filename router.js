@@ -9,31 +9,28 @@ const helpController = require('./sites/controllers/help');
 const declareController = require('./sites/controllers/declare');
 
 /**
+ * 首页
+ */
+router.get('/', indexController);
+
+/**
  * 列表页
  */
-router.get('/:lang/list', listController);
+router.get('/list', listController);
 
 /**
  * 资源页
  */
-router.get('/:lang/resource/:infohash', resourceController);
+router.get('/resource/:infohash', resourceController);
 
 /**
  * 帮助页面
  */
-router.get('/:lang/help', helpController);
+router.get('/help', helpController);
 
 /**
  * 声明页面
  */
-router.get('/:lang/declare', declareController);
-
-/**
- * 首页
- */
-router.get('/', indexController);
-router.get('/cn', indexController);
-router.get('/tw', indexController);
-router.get('/en', indexController);
+router.get('/declare', declareController);
 
 module.exports = router;
