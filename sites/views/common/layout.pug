@@ -11,13 +11,14 @@ html
   body
     .header
       .header-brand
-        a(href='javascript:;') FindIt
+        a(href='/') FindIt
       .header-search
-        input(type='text' maxlength='40' autocomplete='off')
-        button 搜 索
+        form#form(method='GET' action='/list')
+          input#input(type='text' name='q' maxlength='40' autocomplete='off' value=keyword ? keyword : '')
+          button(type='submit') 搜 索
       .header-right
-        a(href='javascript:;') 声明
-        a(href='javascript:;') 帮助
+        a(href='/declare') 声明
+        a(href='/help') 帮助
 
     block body
 
