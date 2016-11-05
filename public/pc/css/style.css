@@ -207,10 +207,24 @@ body {
     background-position: -58px 0;
 }
 
-.header {
+.notice {
     position: fixed;
     z-index: 1000;
     top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    text-align: center;
+    background-color: #f57b7b;
+}
+
+.header {
+    position: fixed;
+    z-index: 1000;
+    top: 50px;
     left: 0;
     overflow: hidden; 
     width: 100%;
@@ -426,7 +440,7 @@ em {
 
 .list-container {
     width: 1048px;
-    margin: 80px auto 50px;
+    margin: 130px auto 50px;
 }
 .list-main {
     float: left; 
@@ -618,7 +632,7 @@ em {
     line-height: 1.5; 
     width: 760px;
     min-height: 500px;
-    margin: 80px auto 50px;
+    margin: 130px auto 50px;
 }
 .page-container h4 {
     padding-top: 10px;
