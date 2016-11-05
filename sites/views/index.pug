@@ -12,8 +12,8 @@ html(lang='zh-CN')
     .index-header
       .index-header-content
         a.title(href='/') FindIt
-        a.right(href='/declare') 声明
-        a.right(href='/help') 帮助
+        a.right(href='/declare') #{lang.declare}
+        a.right(href='/help') #{lang.help}
         a.right(href='https://github.com/keenwon/antcolony') Fork me on Github
       .index-header-bg
     .index-main
@@ -21,7 +21,7 @@ html(lang='zh-CN')
       .index-search
         form#form(method='GET' action='/list')
           input#input(type='text' name='q' autocomplete='off' maxlength='40')
-          button(type='submit') 搜 索
+          button(type='submit') #{lang.button}
     .index-foot
       p
         a.J_Lang(href='javascript:;' data-lang='cn') 中文（简体）
@@ -29,7 +29,7 @@ html(lang='zh-CN')
         a.J_Lang(href='javascript:;' data-lang='en') English
       p
         | Copyright © 2014 findit.so
-        a(href='http://mikecrm.com/f.php?t=hPd4wY' target='_blank') 联系我们
+        a(href='http://mikecrm.com/f.php?t=hPd4wY' target='_blank') #{lang.contact}
 
     script(src='//cdn.bootcss.com/jquery/1.10.2/jquery.min.js')
     script(src='//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js')

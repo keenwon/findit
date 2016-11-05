@@ -9,6 +9,7 @@ module.exports = function *() {
 
   this.render('list', {
     keyword,
-    currentPage
+    currentPage,
+    lang: this.request.lang
   });
 };

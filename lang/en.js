@@ -12,7 +12,7 @@ module.exports = {
   button: 'Search',
   maintain: 'website is down for maintenance',
   resource_nofound: 'The resource is not found',
-  search_info: 'About %d results for you, taking %s seconds.',
+  search_info: 'About 100 results for you, taking 0.11 seconds.',
   noresult_title: 'Your search did not match any documents. Suggestions:',
   noresult_suggest: '<ul><li>Make sure all words are spelled correctly.</li><li>Try different keywords.</li><li>Try more general keywords.</li><li>Try fewer keywords.</li></ul>',
   nomore: 'In order to ensure the search quality, we only provide the top 20 pages of the search results.If you haven\'t found the resources you want, please try to adjust the keywords to search again',

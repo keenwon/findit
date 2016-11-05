@@ -10,6 +10,7 @@ const send = require('koa-send');
 const config = require('./config');
 const router = require('./router');
 const logger = require('./lib/logger');
+const lang = require('./lib/lang');
 const bodyParser = require('./lib/bodyParser');
 const error = require('./lib/error');
 
@@ -28,6 +29,9 @@ app.use(function *(next) {
   yield next;
   this.set('X-Powered-By', 'findit');
 });
+
+// language
+app.use(lang);
 
 // view engine
 const pug = new Pug({

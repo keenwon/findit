@@ -12,7 +12,7 @@ module.exports = {
   button: '搜 尋',
   maintain: '網站維護中',
   resource_nofound: '该资源不存在',
-  search_info: '約有 %d 項結果 (搜尋時間：%s 秒) ',
+  search_info: '約有 100 項結果 (搜尋時間：0.11 秒) ',
   noresult_title: '找不到符合搜尋的文件，建議：',
   noresult_suggest: '<ul><li>請檢查有無錯別字</li><li>請換用不同的查詢字詞</li><li>請改試較常用的字詞</li></ul>',
   nomore: '為了提供關聯性最高的搜尋結果，我們省略了部分内容',

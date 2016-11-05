@@ -4,5 +4,7 @@
  * 首页
  */
 module.exports = function *() {
-  this.render('index');
+  this.render('index', {
+    lang: this.request.lang
+  });
 };

@@ -4,8 +4,8 @@ html
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width initial-scale=1')
-    meta(name='description' content='最新最快的磁力资源搜索引擎。影视、音乐、游戏、程序、图片、小说...')
-    title Findit 磁力搜索引擎
+    meta(name='description' content=lang.description)
+    title #{lang.title}
     link(rel='stylesheet' type='text/css' media='all' href='/pc/css/style.min.css')
     block head
   body
@@ -15,10 +15,10 @@ html
       .header-search
         form#form(method='GET' action='/list')
           input#input(type='text' name='q' maxlength='40' autocomplete='off' value=keyword ? keyword : '')
-          button(type='submit') 搜 索
+          button(type='submit') #{lang.button}
       .header-right
-        a(href='/declare') 声明
-        a(href='/help') 帮助
+        a(href='/declare') #{lang.declare}
+        a(href='/help') #{lang.help}
 
     block body
 

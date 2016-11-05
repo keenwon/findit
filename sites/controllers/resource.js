@@ -4,5 +4,7 @@
  * 资源页
  */
 module.exports = function *() {
-  this.render('resource');
+  this.render('resource', {
+    lang: this.request.lang
+  });
 };

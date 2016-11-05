@@ -12,7 +12,7 @@ module.exports = {
   button: '搜 索',
   maintain: '网站维护中',
   resource_nofound: '该资源不存在',
-  search_info: 'Findit 为您找到相关结果约 %d 个，耗时 %s 秒',
+  search_info: 'Findit 为您找到相关结果约 100 个，耗时 0.11 秒',
   noresult_title: '对不起，暂时未找到相关内容，建议：',
   noresult_suggest: '<ul><li>请检查输入字词有无错误。</li><li>请尝试其他的查询词。</li><li>请改用较常见的字词。</li><li>请减少查询字词的数量。</li></ul>',
   nomore: '为了保证搜索质量，我们仅提供前20页的搜索结果，如果您还没有找到想要的资源，请尝试调节关键字重新搜索！',

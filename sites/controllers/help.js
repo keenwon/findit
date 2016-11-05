@@ -4,5 +4,7 @@
  * 帮助页
  */
 module.exports = function *() {
-  this.render('help');
+  this.render('help', {
+    lang: this.request.lang
+  });
 };
