@@ -7,6 +7,7 @@ const Pug = require('koa-pug');
 const fetch = require('node-fetch');
 const error = require('../../lib/error');
 const logger = require('../../lib/logger');
+const lang = require('../../lang/cn');
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
@@ -20,6 +21,11 @@ describe('error测试', function () {
 
     logger.register(app);
     app.use(logger.useGlobalLogger());
+
+    app.use(function *(next) {
+      this.request.lang = lang;
+      yield next;
+    });
 
     app.on('error', function () {
       // 测试过程中, 不向控制台输入预期的错误信息
@@ -61,7 +67,7 @@ describe('error测试', function () {
       .then(response => response.text())
       .should
       .eventually
-      .include('请稍后再试');
+      .include(lang.maintain);
   });
 
   it('404', function () {
@@ -69,7 +75,7 @@ describe('error测试', function () {
       .then(response => response.text())
       .should
       .eventually
-      .include('页面不存在');
+      .include(lang.resource_nofound);
   });
 
 });
