@@ -42,6 +42,5 @@ module.exports = {
 
   js_jquery: '//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js',
   js_highcharts: '//cdnjs.cloudflare.com/ajax/libs/highcharts/4.0.4/highcharts.js',
-  js_bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js',
-  css_bootstrap: '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css'
+  js_jquery_cookie: '//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js'
 };

@@ -42,6 +42,5 @@ module.exports = {
 
   js_jquery: '//cdn.bootcss.com/jquery/1.10.2/jquery.min.js',
   js_highcharts: '//cdn.bootcss.com/highcharts/4.0.4/highcharts.js',
-  js_bootstrap: '//cdn.bootcss.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js',
-  css_bootstrap: '//cdn.bootcss.com/twitter-bootstrap/3.2.0/css/bootstrap.min.css'
+  js_jquery_cookie: '//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js'
 };

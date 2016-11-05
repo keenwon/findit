@@ -1,4 +1,206 @@
 extends common/layout
 
 block body
-  p resource
+  .list-container
+    .list-main
+      .content
+        h3
+          | #{lang.baseInfo}
+          a(href='http://www.mikecrm.com/f.php?t=Ug6YfQ', target='_blank') [举报]
+        .content-body
+          table.base-info
+            tr
+              th(style={width: lang.thWidth}) #{lang.filaName}：
+              td 周星驰
+            tr
+              th(style={width: lang.thWidth}) #{lang.fileSize}：
+              td 12.69 GB
+            tr
+              th(style={width: lang.thWidth}) #{lang.fileType}：
+              td rmvb
+            tr
+              th(style={width: lang.thWidth}) #{lang.createTime}：
+              td 2014-10-03 12:19:05 UTC
+            tr
+              th(style={width: lang.thWidth}) #{lang.updateTime}：
+              td 2015-01-19 04:31:06 UTC
+            tr
+              th(style={width: lang.thWidth}) infohash：
+              td 1F48A4C9B56382D965F8E75BE2B4108010B36DAC
+      .content
+        h3 #{lang.magnetLink}
+        .content-body
+          p !{lang.cannotDownload}
+      .content
+        h3 !{lang.torrentFile}
+        .content-torrent
+          p #{lang.torrentFileTips}
+          ul
+            li
+              a(href='http://torrage.com/torrent/1F48A4C9B56382D965F8E75BE2B4108010B36DAC.torrent', rel='nofollow', target='_blank') torrage.com
+            li
+              a(href='https://zoink.it/torrent/1F48A4C9B56382D965F8E75BE2B4108010B36DAC.torrent', rel='nofollow', target='_blank') zoink.it
+            li
+              a(href='http://torcache.net/torrent/1F48A4C9B56382D965F8E75BE2B4108010B36DAC.torrent', rel='nofollow', target='_blank') torcache.net
+      .content
+        h3 #{lang.history}
+        #chart.content-charts
+      .content
+        h3 #{lang.fileList}
+        .content-body
+          table.file-info
+            tr
+              th ▲家有喜事97B.rm
+              td 59.76 MB
+            tr
+              th ▲家有喜事97A.rm
+              td 83.85 MB
+            tr
+              th [2001]少林足球.rm
+              td 436.90 MB
+            tr
+              th [1999]行运一条龙.rmvb
+              td 326.30 MB
+            tr
+              th [1999]千王之王2000[粤语].rmvb
+              td 295.03 MB
+            tr
+              th [1998]喜剧之王.rmvb
+              td 359.43 MB
+            tr
+              th [1997]算死草[粤语].rmvb
+              td 257.22 MB
+            tr
+              th [1996]食神b.rmvb
+              td 161.70 MB
+            tr
+              th [1996]食神a.rmvb
+              td 151.91 MB
+            tr
+              th [1996]大内密探零零發[粤语].rmvb
+              td 290.92 MB
+            tr
+              th [1995]整鬼专家(回魂夜).rmvb
+              td 283.50 MB
+            tr
+              th [1995]百变星君.rmvb
+              td 323.73 MB
+            tr
+              th [1994]破坏之王.rmvb
+              td 324.82 MB
+            tr
+              th [1994]九品芝麻官(白面包青天).rmvb
+              td 329.69 MB
+            tr
+              th [1994]国产零零漆.rmvb
+              td 300.84 MB
+            tr
+              th [1994]大话西游之月光宝盒.rmvb
+              td 381.95 MB
+            tr
+              th [1994]大话西游之仙履奇缘.rmvb
+              td 382.72 MB
+            tr
+              th [1993]逃学威龙Ⅲ之龙过鸡年.rmvb
+              td 320.53 MB
+            tr
+              th [1993]唐伯虎点秋香.rmvb
+              td 331.83 MB
+            tr
+              th [1993]济公.rmvb
+              td 290.91 MB
+            tr
+              th [1992]武状元苏乞儿.rmvb
+              td 281.05 MB
+            tr
+              th [1992]逃学威龙Ⅱ之眼中钉.rmvb
+              td 339.04 MB
+            tr
+              th [1992]审死官.rmvb
+              td 333.84 MB
+            tr
+              th [1992]漫画威龙(摩登武圣).rmvb
+              td 301.55 MB
+            tr
+              th [1992]鹿鼎记Ⅱ之神龙教.rmvb
+              td 482.34 MB
+            tr
+              th [1992]鹿鼎记Ⅰ.rmvb
+              td 361.69 MB
+            tr
+              th [1992]家有喜事[粤语].rmvb
+              td 253.51 MB
+            tr
+              th [1991]整蛊专家[粤语].rmvb
+              td 269.92 MB
+            tr
+              th [1991]新精武门[粤语].rmvb
+              td 326.96 MB
+            tr
+              th [1991]逃学威龙Ⅰ之神嘴风云.rmvb
+              td 331.70 MB
+            tr
+              th [1991]情圣.rmvb
+              td 335.02 MB
+            tr
+              th [1991]龙的传人.rmvb
+              td 297.00 MB
+            tr
+              th [1991]赌圣.上海滩.rmvb
+              td 377.94 MB
+            tr
+              th [1990]无敌幸运星_When Fortune Smiles[粤语].rmvb
+              td 338.91 MB
+            tr
+              th [1990]师兄撞鬼(鬼警出师).rm
+              td 411.06 MB
+            tr
+              th [1990]咖喱辣椒.rmvb
+              td 315.51 MB
+            tr
+              th [1990]赌侠[粤].rmvb
+              td 346.68 MB
+            tr
+              th [1990]赌圣.rm
+              td 325.33 MB
+            tr
+              th 江湖最后一个大佬B.RM
+              td 69.01 MB
+            tr
+              th 江湖最后一个大佬A.RM
+              td 85.92 MB
+            tr
+              th ▲最佳女婿 B.rm
+              td 69.02 MB
+            tr
+              th ▲最佳女婿 A.rm
+              td 73.70 MB
+            tr
+              th ▲捕风汉子B.rm
+              td 71.03 MB
+            tr
+              th ▲捕风汉子A.rm
+              td 82.52 MB
+            tr
+              th [1990]一本漫画闯天涯[粤语].rmvb
+              td 277.10 MB
+            tr
+              th [1990]望夫成龙[粤语].rmvb
+              td 233.85 MB
+            tr
+              th [1990]风雨同路.rmvb
+              td 307.83 MB
+    .list-sidebar
+      .list-declare.box
+        | !{lang.declareText}
+  a.backtotop(href='javascript:;', title='back to top')
+
+block foot
+  script.
+    var name = '周星驰';
+    var categories = ["10-23", "10-24", "10-25", "10-26", "10-27", "10-28", "10-29", "10-30", "10-31", "11-01", "11-02", "11-03", "11-04"];
+    var data = [0, 12, 44, 54, 22, 9, 12, 23, 0, 2, 4, 1, 12];
+    var chartTitle = '#{lang.chartTitle}';
+    var chartHot = '#{lang.chartHot}';
+  script(src=lang.js_highcharts)
+  script(src='/pc/js/resource.js')
